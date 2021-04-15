@@ -1,0 +1,20 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5440:5432/tcp
+  loja-vanda:
+    build: .
+    command: bash -c "sh /var/www/docker-entrypoint.sh"
+    container_name: Lojinha-Vanda
+    volumes:
+      - .:/var/www
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
