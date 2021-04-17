@@ -3,7 +3,12 @@
 
 {% block content %}
 
-<div>
-    <h1>Olá, sejam bem vindos!!</h1>
+<div class="content">
+    <div class="greetings">
+        {% for name in username %}
+        <h1>Olá {{name}}, sejam bem vindos!!</h1>
+        {% endfor %}
+        <a>Vanda Artesanato's tem o prazer da sua visita ao nosso site</a>
+    </div>
 </div>
 {% endblock %}

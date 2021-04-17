@@ -5,15 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/content.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300;700&family=Source+Code+Pro&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
     <title>Lojinha</title>
 </head>
 <body>
     <div>
         <header>
             <div class="app">
-                <div class="logo">
-                    <img class="img-logo" src="../static/images/VandaN.png">
-                </div>
+                <img class="img-logo" src="../static/images/Logo.jpg">
+                <nav class="menu">
+                    <ul class="container-menu">
+                        <li><a href="about.html">SOBRE</a></li>
+                        <li><a href="skills.html">MASCARAS</a></li>
+                        <li><a href="contact.html">CONTATO</a></li>
+                        <li><a href="/logout">LOGOUT</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <div>
