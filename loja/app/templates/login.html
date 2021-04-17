@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300;700&family=Source+Code+Pro&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-login">
+            <div class="content-form">
+                <div class="welcome">
+                    <a>Bem Vindo!</a>
+                </div>
+                <div class="logo">
+                    <img class="logo-in" src="../static/images/Logo-2.jpg">
+                </div>
+                <div class="container-login">
+                    <form action="submit" method="POST">{% csrf_token %}
+                        <div class="login-name">
+                            <input style="border: 1px solid rgb(175 175 175); border-radius: 10px;" name="username" class="l-name" type="text" placeholder="Digite seu Login...">
+                        </div>
+                        <div class="login-senha">
+                            <input style="border: 1px solid rgb(175 175 175); border-radius: 10px;" name="password" class="l-name" type="password" placeholder="Digite sua Senha...">
+                        </div>
+                        <div class="btn-login">
+                            <button type="submit" class="btn-logar">Login</button>
+                        </div>
+                    </form>
+                    <div style="padding: 25px;" align="center">
+                        <p></p>
+                        {% for message in messages %}
+                            <strong>{{ message }}</strong>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="not-account">
+                    <div class="create-account">
+                        <a style="color: rgb(52 63 63)">Crie já sua conta?  <a style="font-weight: bold; color: rgb(52 63 63)" href="" >AQUI</a></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
