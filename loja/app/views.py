@@ -31,4 +31,14 @@ def logout_user(request):
     logout(request)
     return redirect('/')
 
+@login_required(login_url='/login/')
+def get_contact(request):
+    template = 'contact.html'
+    return render(request, template)
+
+@login_required(login_url='/login/')
+def get_fabric(request):
+    template = 'fabric.html'
+    return render(request, template)
+
 # Create your views here.
