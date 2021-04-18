@@ -4,18 +4,41 @@
     box-sizing: border-box;
 }
 
-/* @media(max-width: 1200px){
+/* For Mobile */
+@media screen and (max-device-width: 1024px){
 
-    .img-logo{
-        width: 70px;
+    .container-menu{
+        font-size: 13px;
     }
 
-} */
+    .img-logo{
+        width: 200px;
+    }
 
-@media(max-width: 1900px){
+    .msg-about{
+        height: 50vh;
+    }
+
+    .content-contact{
+        height: 65vh;
+        padding: 10px;
+    }
+
+}
+
+/* For desktop */
+@media screen and (min-device-width: 1024px){
 
     .img-logo{
-        width: 100px;
+        width: 400px;
+    }
+
+    .msg-about{
+        height: 65vh;
+    }
+
+    .content-contact{
+        height: 75vh;
     }
 
 }
@@ -27,11 +50,12 @@ body{
 }
 
 header{
-    border-bottom: 1px solid rgb(226, 226, 226);
     margin-bottom: 10px;
+    height: 20vh;
 }
 
 .app{
+    border-bottom: 1px solid rgb(226, 226, 226);
     max-width: 1038px;
     margin: 0 auto;
     padding: 25px 11px 20px;
@@ -39,9 +63,7 @@ header{
 }
 
 .img-logo{
-    /* width: 100px; */
-    float: left;
-    margin-top: -30px;
+    
 }
 
 .menu{
@@ -60,7 +82,7 @@ header{
 
 .menu a{
     border-radius: 10px;
-    padding: 25px 25px;
+    padding: 20px 20px;
     transition: background-color 0.8s, color 0.08s;
 }
 
@@ -79,8 +101,58 @@ a{
     padding: 1px;
     color: rgb(71, 88, 103); 
     text-decoration: none;
-    position:absolute;
+    position:fixed;
     text-align: center;
     width:100%;
     font-size: 13px;
+}
+
+/* CSS DO CONTEUDO Da pagina inicial */
+.msg-welcome{
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.msg-about{
+    padding: 20px;
+}
+
+.msg-vanda{
+    height: 100px;
+}
+
+/* CSS PARA A PAGINA DE CONTATO */
+
+.contacts-inline{
+    text-align: center;
+    cursor: pointer;
+    font-size: 7em;
+    transition: text-shadow 1s;
+}
+
+.contact-name{
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.msg-contact{
+    font-weight: bold;
+    padding: 10px;
+}
+
+.content-contact{
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-in{
+}
+
+/* CSS PARA OS TECIDOS */
+
+.content{
+    margin: 0 auto;
 }
