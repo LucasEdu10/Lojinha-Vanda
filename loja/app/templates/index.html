@@ -5,10 +5,21 @@
 
 <div class="content">
     <div class="greetings">
-        {% for name in username %}
-        <h1>Olá {{name}}, sejam bem vindos!!</h1>
-        {% endfor %}
-        <a>Vanda Artesanato's tem o prazer da sua visita ao nosso site</a>
+        <div class="msg-welcome">
+            <a>Olá {{ user.get_full_name }}, sejam bem vindo!!</a>
+        </div>
+        <div class="msg-about">
+            <div class="msg-vanda">
+                <a>Vanda Artesanato's tem o prazer da sua visita ao nosso site</a><br>
+                <div style="margin-top: 40px;">
+                    <a>Para ver o catalogo clique <a href="">AQUI.</a>
+                </div>
+                </a>
+            </div>
+            <div>
+                <img class="img-logo" src="../static/images/Logo.jpg">
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
