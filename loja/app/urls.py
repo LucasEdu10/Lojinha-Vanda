@@ -12,5 +12,6 @@ urlpatterns = [
     path('login/submit', views.submit_login),
     path('logout/', views.logout_user),
     path('contact/', views.get_contact),
-    path('fabric/', views.get_fabric),
+    path('product/', views.get_product),
+    url(r'^login/visitante/$', views.get_visit)
 ]
