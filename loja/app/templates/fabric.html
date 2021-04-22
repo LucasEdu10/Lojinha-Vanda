@@ -1,9 +1,53 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
 {% load static %}
 
-{% block content %}
-
-<div class="content">
-<h1>Olá, funcionou</h1>
-</div>
-{% endblock %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/page_visitor.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300;700&family=Source+Code+Pro&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/expand.js' %}"></script>
+    <title>Tecidos</title>
+</head>
+<body>
+    <div class="content">
+        <header>
+            <div class="header_content">
+                <div>
+                    <img class="img-logo" src="https://i.ibb.co/7JwJhTz/Logo.jpg" alt="Logo" border="0">
+                </div>
+                <div class="title-page">
+                    <a style="font-weight: bold; color:#15a3c7; font-size: 20px;">TECIDOS</a>
+                </div>
+            </div>
+        </header>
+        <div class="fabrics_father">
+            <div class="information">
+                <a">Olá, para realizar o pedido veja o código do tecido e informe ele e o tamanho de máscara</a>
+            </div>
+            {% for fabrics_in in fabric %}
+            <div class="fabrics">
+                <div class="ajusted-img">
+                    <img class="img-fabric" src="{{ fabrics_in.picture_fabric.url}}" alt="{{ fabrics_in.name_fabric }}">
+                </div>
+                <div class="name-fabric">
+                    <a>{{fabrics_in.name_fabric}}</a>
+                </div>
+                <div class="desc-fabric">
+                    <a>{{fabrics_in.description}}</a>
+                </div>
+                <div class="cod-fabric">
+                    <a>Cod. Tecido: <a style="font-weight: bold; ">{{fabrics_in.cod_fabric}}</a></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <footer class="footer-by">
+        <p>© 2021 Lucas Eduardo </p>
+    </footer>
+</body>
+</html>
