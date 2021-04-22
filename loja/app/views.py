@@ -2,9 +2,10 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required 
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
+from .models import ProductType, Fabric
 
 def index(request):
-    return redirect('/login')
+    return redirect('/home')
 
 @login_required(login_url='/login/')
 def get_home(request):
@@ -37,8 +38,14 @@ def get_contact(request):
     return render(request, template)
 
 @login_required(login_url='/login/')
-def get_fabric(request):
+def get_product(request):
+    product = ProductType.objects.all()
+    template = 'product.html'
+    return render(request, template, {'product': product})
+
+def get_visit(request):
     template = 'fabric.html'
-    return render(request, template)
+    fabrics = Fabric.objects.all()
+    return render(request, template, {'fabric':fabrics})
 
 # Create your views here.
