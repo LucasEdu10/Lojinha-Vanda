@@ -19,9 +19,18 @@
         height: 50vh;
     }
 
+    .product-father{
+        height: 65vh;
+    }
+
     .content-contact{
         height: 65vh;
         padding: 10px;
+    }
+
+    .products-table{
+        margin: 0px 3px 15px;
+        padding: 30px 20px;
     }
 
 }
@@ -39,6 +48,17 @@
 
     .content-contact{
         height: 75vh;
+    }
+    
+    .product-father{
+        height: 75vh;
+        margin-left: 320px;
+        margin-right: 320px;
+    }
+
+    .products-table{
+        margin: 0px 30px 15px;
+        padding: 60px 50px;
     }
 
 }
@@ -151,8 +171,27 @@ a{
 .content-in{
 }
 
-/* CSS PARA OS TECIDOS */
+/* CSS PARA OS PRODUTOS */
 
 .content{
     margin: 0 auto;
+}
+
+.product-father{
+    padding: 10px;
+}
+
+.products-table{
+    background: rgb(248, 248, 248);
+    border: 1px solid rgb(236, 236, 236);
+    box-sizing: border-box;
+    box-shadow: rgb(0 0 0 / 4%) 0px 2px 8px;
+    border-radius: 4px;
+    max-width: 245px;
+    position: relative;
+    float: left;
+}
+
+.teste{
+    /* margin-left: 150px; */
 }
