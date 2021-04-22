@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="product-father">
+    <div class="teste">
+        {% for product_in in product %}
+        <div class="products-table">
+            <div class="product-name">
+                <a>{{product_in.name_product}}</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
