@@ -14,7 +14,7 @@
     <title>Tecidos</title>
 </head>
 <body>
-    <div class="content">
+    <div class="container">
         <header>
             <div class="header_content">
                 <div>
@@ -25,37 +25,39 @@
                 </div>
             </div>
         </header>
-        <div class="fabrics_father">
-            <div class="information">
-                <a">Olá, para realizar o pedido veja o código do tecido e informe ele e o tamanho de máscara</a>
-            </div>
-            {% for fabrics_in in fabric %}
-            <div class="fabrics">
-                <div class="ajusted-img">
-                    <img class="img-fabric" src="{{ fabrics_in.picture_fabric.url}}" alt="{{ fabrics_in.name_fabric }}">
+        <div class="tecidos">
+            <div class="fabrics_father">
+                <div class="information">
+                    <a style="font-size: 25px;">Olá, para realizar o pedido veja o código do tecido e informe ele e o tamanho de máscara</a>
                 </div>
-                <div class="name-fabric">
-                    <a>{{fabrics_in.name_fabric}}</a>
+                {% for fabrics_in in fabric %}
+                <div class="fabrics">
+                    <div class="ajusted-img">
+                        <img class="img-fabric" src="{{ fabrics_in.picture_fabric.url}}" alt="{{ fabrics_in.name_fabric }}">
+                    </div>
+                    <div class="name-fabric">
+                        <a>{{fabrics_in.name_fabric}}</a>
+                    </div>
+                    <div class="desc-fabric">
+                        <a>{{fabrics_in.description}}</a>
+                    </div>
+                    <div class="cod-fabric">
+                        <a>Cod. Tecido: <a style="font-weight: bold; ">{{fabrics_in.cod_fabric}}</a></a>
+                    </div>
                 </div>
-                <div class="desc-fabric">
-                    <a>{{fabrics_in.description}}</a>
-                </div>
-                <div class="cod-fabric">
-                    <a>Cod. Tecido: <a style="font-weight: bold; ">{{fabrics_in.cod_fabric}}</a></a>
-                </div>
-            </div>
-            {% endfor %}
-            <div class="btn-position">
-                <button class="btn-pedido">
-                    <a style="text-decoration: none;" href="https://wa.me/5581999914057"><i class="fab fa-whatsapp"></i>
-                        Fazer pedido
-                    </a>
-                </button>
+                {% endfor %}
+                <!-- <div class="btn-position">
+                    <button class="btn-pedido">
+                        <a style="text-decoration: none; color: rgb(234, 240, 240);" href="https://wa.me/5581999914057"><i class="fab fa-whatsapp"></i>
+                            Fazer pedido
+                        </a>
+                    </button>
+                </div> -->
             </div>
         </div>
     </div>
-    <footer class="footer-by">
-        <p>© 2021 Lucas Eduardo </p>
-    </footer>
 </body>
+<footer class="footer-by">
+    <p>© 2021 Lucas Eduardo </p>
+</footer>
 </html>
